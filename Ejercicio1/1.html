@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Condicional</title>
+</head>
+<body>
+    <h1>¿Eres bellisimo/a?</h1>
+    <input type="text" id="respuesta" placeholder="Escribe sí o no">
+    <button onclick="evaluarRespuesta()">Enviar</button>
+    <p id="resultado"></p>
+    <script src="script.js"></script>
+    <script>
+        function evaluarRespuesta() {
+            // Obtener la respuesta del usuario
+            let respuesta = document.getElementById('respuesta').value;
+            let resultado = document.getElementById('resultado');
+
+            // Evaluar la respuesta
+            if (respuesta.toLowerCase() === "sí" || respuesta.toLowerCase() === "si") {
+                resultado.textContent = "Ciertamente";
+            } else if (respuesta.toLowerCase() === "no") {
+                resultado.textContent = "No te creo";
+            } else {
+                resultado.textContent = "Respuesta no válida, por favor responde con 'sí' o 'no'";
+            }
+        }
+    </script>
+</body>
+</html>
+
